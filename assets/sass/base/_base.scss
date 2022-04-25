@@ -62,8 +62,31 @@ img {
     border: none
 }
 
-.hide {
-    display: none;
+.hide,
+.hidden {
+    display: none !important;
+}
+
+.visually-hidden {
+    position: absolute!important;
+    overflow: hidden!important;
+    width: 1px!important;
+    height: 1px!important;
+    margin: -1px!important;
+    padding: 0!important;
+    border: 0!important;
+    clip: rect(0 0 0 0)!important;
+    word-wrap: normal!important;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 svg {
@@ -273,7 +296,7 @@ a {
 }
 
 a:hover {
-    color: $link_color_hover;
+    color: $link-color-hover;
     outline: none;
     text-decoration: none
 }
@@ -283,7 +306,7 @@ a:hover {
 }
 
 .form-success {
-    border: 1px solid $border_color;
+    border: 1px solid $border-color;
     margin-bottom: 20px;
     padding: 5px 20px 5px 30px
 }
@@ -340,13 +363,13 @@ small {
 }
 
 table {
-    border: 1px solid $border_color;
+    border: 1px solid $border-color;
     min-width: 100%
 }
 
 table td,
 table th {
-    border-bottom: 1px solid $border_color;
+    border-bottom: 1px solid $border-color;
     padding: 9px 15px
 }
 
@@ -354,4 +377,104 @@ table th {
     font-size: 11px;
     text-transform: uppercase;
     font-weight: 700
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 20px;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-radius: 0;
+    border: 1px solid rgba(255, 255, 255, 0);
+    min-width: 130px;
+    max-width: 100%;
+    transition: all .3s ease;
+    padding: 7px 15px 7px;
+    font-size: 13px;
+    letter-spacing: .05em;
+}
+
+.left,
+.text-left {
+    text-align: left;
+}
+
+.center,
+.text-center {
+    text-align: center;
+}
+
+.right,
+.text-right {
+    text-align: right;
+}
+
+.uppercase {
+    text-transform: uppercase!important;
+}
+
+.lowercase {
+    text-transform: lowercase!important;
+}
+
+.capitalize {
+    text-transform: capitalize!important;
+}
+
+*:empty {
+    display: none;
+}
+
+br:empty,
+hr:empty,
+iframe:empty,
+path:empty,
+line:empty,
+circle:empty,
+use:empty,
+img:empty,
+input:empty,
+rect:empty,
+textarea:empty,
+.display-empty:empty,
+shopify-payment-terms:empty,
+shopify-installments-modal:empty,
+model-viewer:empty,
+polyline:empty {
+    display: block;
+}
+
+a {
+    transition: $anchor-transition;
+    color: $color-link;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.link {
+    display: inline-block;
+    vertical-align: top;
+    font-size: $font-size;
+    font-weight: $font-weight-normal;
+    line-height: $line-height;
+}
+
+.link .icon {
+    fill: var(--color-link);
+}
+
+.link-underline .text {
+    transition: text-decoration 100ms ease;
+}
+
+.text-underline .text {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
 }

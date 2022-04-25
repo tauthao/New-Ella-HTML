@@ -64,8 +64,31 @@ img {
   border: none;
 }
 
-.hide {
-  display: none;
+.hide,
+.hidden {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  word-wrap: normal !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 svg {
@@ -368,5 +391,111 @@ table th {
   font-size: 11px;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 20px;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 0;
+  border: 1px solid rgba(255, 255, 255, 0);
+  min-width: 130px;
+  max-width: 100%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  padding: 7px 15px 7px;
+  font-size: 13px;
+  letter-spacing: .05em;
+}
+
+.left,
+.text-left {
+  text-align: left;
+}
+
+.center,
+.text-center {
+  text-align: center;
+}
+
+.right,
+.text-right {
+  text-align: right;
+}
+
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+.lowercase {
+  text-transform: lowercase !important;
+}
+
+.capitalize {
+  text-transform: capitalize !important;
+}
+
+*:empty {
+  display: none;
+}
+
+br:empty,
+hr:empty,
+iframe:empty,
+path:empty,
+line:empty,
+circle:empty,
+use:empty,
+img:empty,
+input:empty,
+rect:empty,
+textarea:empty,
+.display-empty:empty,
+shopify-payment-terms:empty,
+shopify-installments-modal:empty,
+model-viewer:empty,
+polyline:empty {
+  display: block;
+}
+
+a {
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  color: #000000;
+  cursor: pointer;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-decoration: none;
+}
+
+.link {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+.link .icon {
+  fill: var(--color-link);
+}
+
+.link-underline .text {
+  -webkit-transition: -webkit-text-decoration 100ms ease;
+  transition: -webkit-text-decoration 100ms ease;
+  transition: text-decoration 100ms ease;
+  transition: text-decoration 100ms ease, -webkit-text-decoration 100ms ease;
+}
+
+.text-underline .text {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
 }
 /*# sourceMappingURL=style.css.map */
