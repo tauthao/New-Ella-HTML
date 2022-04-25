@@ -786,6 +786,10 @@ svg {
   position: relative;
 }
 
+.img-box--mobile .image + .image {
+  display: block;
+}
+
 /* END: Banner Image */
 @media (min-width: 768px) {
   .img-box--mobile .image {
