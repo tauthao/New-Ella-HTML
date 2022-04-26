@@ -96,6 +96,11 @@ svg {
     height: 20px
 }
 
+.close svg {
+    width: 17px;
+    height: 17px;
+}
+
 fieldset,
 legend {
     border: none
@@ -323,11 +328,6 @@ h6 {
     padding: 0
 }
 
-h1 {
-    font-size: 2.307692308em;
-    margin-bottom: 1em
-}
-
 h2 {
     font-size: 2em;
     margin-bottom: 1em
@@ -394,8 +394,8 @@ table th {
     min-width: 130px;
     max-width: 100%;
     transition: all .3s ease;
-    padding: 7px 15px 7px;
-    font-size: 13px;
+    padding: 12px 15px 11px;
+    font-size: 14px;
     letter-spacing: .05em;
     &.button-1 {
         background-color: #232323;
@@ -803,6 +803,16 @@ svg {
     }
 }
 
+@media (min-width: 1025px) {
+    .image-zoom {
+        overflow: hidden;
+        position: relative;
+        &:hover {
+            transform: scale(1.06);
+        }
+    }
+}
+
 @media (min-width: 1200px) {
     .container.container-1170,
     .container.container-header-1170 {
@@ -812,12 +822,6 @@ svg {
 
 @media (min-width: 1400px) {
     /* START: Container */
-    .container,
-    .container.container-1370,
-    .container.container-header-1370 {
-        padding-left: calc((100% - 1370px)/ 2);
-        padding-right: calc((100% - 1370px)/ 2);
-    }
     .container.container-1370,
     .container.container-header-1370 {
         max-width: 1400px!important;
@@ -827,12 +831,6 @@ svg {
 
 @media (min-width: 1600px) {
     /* START: Container */
-    .container,
-    .container.container-1570,
-    .container.container-header-1570 {
-        padding-left: calc((100% - 1570px)/2);
-        padding-right: calc((100% - 1570px)/2);
-    }
     .container.container-1570,
     .container.container-header-1570 {
         max-width: 1600px!important;
@@ -849,12 +847,6 @@ svg {
 
 @media (min-width: 1920px) {
     /* START: Container */
-    .container,
-    .container.container-1770,
-    .container.container-header-1770 {
-        padding-left: calc((100% - 1770px)/2);
-        padding-right: calc((100% - 1770px)/2);
-    }
     .container.container-1860 {
         padding-left: calc((100% - 1860px)/2);
         padding-right: calc((100% - 1860px)/2);
