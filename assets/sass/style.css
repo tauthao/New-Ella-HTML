@@ -823,13 +823,42 @@ svg {
 }
 
 @media (min-width: 1025px) {
-  .image-zoom {
-    overflow: hidden;
+  .animate-scale {
     position: relative;
+    display: block;
+    overflow: hidden;
   }
-  .image-zoom:hover {
-    -webkit-transform: scale(1.06);
-            transform: scale(1.06);
+  .animate-scale img {
+    webkit-transition: all .7s ease;
+    -webkit-transition: all .7s ease;
+    transition: all .7s ease;
+  }
+  .animate-scale:hover img {
+    moz-transform: scale3d(1.1, 1.1, 1);
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale(1.1);
+  }
+  .animate-scale:hover::before {
+    overflow: visible;
+    opacity: .3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=30)";
+    filter: alpha(opacity=30);
+  }
+  .animate-scale::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #232323;
+    overflow: hidden;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+    filter: alpha(opacity=0);
+    z-index: 2;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
   }
 }
 
