@@ -802,7 +802,12 @@ svg {
         transform: translate(0, -50%);
     }
 }
-
+@media (min-width: 1200px) {
+    .container.container-1170,
+    .container.container-header-1170 {
+        max-width: 1200px !important;
+    }    
+}
 @media (min-width: 1400px) {
     /* START: Container */
     .container,
@@ -845,10 +850,6 @@ svg {
     .container {
         padding-left: 15px!important;
         padding-right: 15px!important;
-    }
-    .container.container-1170,
-    .container.container-header-1170 {
-        max-width: 1200px!important;
     }
     .container.container-1370,
     .container.container-header-1370 {
