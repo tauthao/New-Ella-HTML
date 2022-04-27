@@ -915,6 +915,20 @@ svg {
     -webkit-transition: all .7s ease;
     transition: all .7s ease;
   }
+<<<<<<< HEAD
+=======
+  .animate-scale:hover img {
+    moz-transform: scale3d(1.1, 1.1, 1);
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale(1.1);
+  }
+  .animate-scale:hover::before {
+    overflow: visible;
+    opacity: .3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=30)";
+    filter: alpha(opacity=30);
+  }
+>>>>>>> 7459989de2869c4fc273eab064f05a5e54c666a6
   .animate-scale::before {
     content: "";
     position: absolute;
@@ -930,6 +944,7 @@ svg {
     z-index: 2;
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
+<<<<<<< HEAD
   }
   .animate-scale:hover img {
     moz-transform: scale3d(1.1, 1.1, 1);
@@ -948,6 +963,8 @@ svg {
   }
   .row .halo-item {
     padding: 0 15px;
+=======
+>>>>>>> 7459989de2869c4fc273eab064f05a5e54c666a6
   }
 }
 
