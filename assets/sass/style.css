@@ -533,6 +533,11 @@ a {
   transition: text-decoration 100ms ease, -webkit-text-decoration 100ms ease;
 }
 
+.link-underline:hover .text {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
 .text-underline .text {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
@@ -752,6 +757,31 @@ svg {
           align-items: center;
 }
 
+.row .halo-item {
+  position: relative;
+}
+
+.row {
+  margin-left: -5px;
+  margin-right: -5px;
+  padding: 0px;
+}
+
+.row .halo-item {
+  padding: 0 5px;
+}
+
+.row > * {
+  padding: 0px 5px;
+}
+
+.col5 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
 /* END: Layout */
 /* START: Container */
 .container {
@@ -820,6 +850,16 @@ svg {
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
   }
+  .row {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  .row .halo-item {
+    padding: 0 8px;
+  }
+  .row > * {
+    padding: 0px 8px;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -859,6 +899,16 @@ svg {
     z-index: 2;
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
+  }
+  .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .row .halo-item {
+    padding: 0 15px;
+  }
+  .row > * {
+    padding: 0px 15px;
   }
 }
 
