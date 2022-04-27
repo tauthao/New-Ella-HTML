@@ -408,7 +408,7 @@ table th {
   white-space: nowrap;
   border-radius: 0;
   border: 1px solid rgba(255, 255, 255, 0);
-  min-width: 130px;
+  min-width: 160px;
   max-width: 100%;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
@@ -821,6 +821,55 @@ svg {
 }
 
 /* END: Banner Image */
+/* START: Block Header */
+.halo-block-header {
+  margin-bottom: 14px;
+}
+
+.halo-block-header .title {
+  color: #232323;
+  position: relative;
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: block;
+  margin-right: 0;
+  margin-top: 1px;
+}
+
+.halo-block-header .title .text {
+  padding: 0 20px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  background: white;
+}
+
+.halo-block-header .view_all {
+  display: inline-block;
+  border-bottom: 1px solid !important;
+  line-height: 16px;
+  line-height: 16px;
+  color: #232323;
+  font-weight: 400;
+  margin-bottom: 20px !important;
+  font-size: 12px;
+  letter-spacing: .02em;
+}
+
+.halo-block-header .title:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #232323;
+}
+
+/* END: Block Header */
 @media (min-width: 768px) {
   .img-box--mobile .image {
     display: block;
@@ -910,12 +959,23 @@ svg {
   .row > * {
     padding: 0px 15px;
   }
+  .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .row .halo-item {
+    padding: 0 15px;
+  }
 }
 
 @media (min-width: 1200px) {
   .container.container-1170,
   .container.container-header-1170 {
     max-width: 1200px !important;
+  }
+  .halo-block-header .title .text {
+    padding: 0 20px;
+    width: 430px;
   }
 }
 
