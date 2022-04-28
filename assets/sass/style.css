@@ -480,10 +480,6 @@ table th {
   width: 100%;
 }
 
-*:empty {
-  display: none;
-}
-
 br:empty,
 hr:empty,
 iframe:empty,
@@ -541,6 +537,12 @@ a {
 .text-underline .text {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
+}
+
+.image-adapt {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .image-adapt img {
@@ -757,7 +759,7 @@ svg {
           align-items: center;
 }
 
-.row .halo-item {
+.row .halo-row-item {
   position: relative;
 }
 
@@ -780,6 +782,14 @@ svg {
   -ms-flex: 0 0 20%;
   flex: 0 0 20%;
   max-width: 20%;
+}
+
+.desc {
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: .02em;
+  color: #232323;
+  margin: 0px;
 }
 
 /* END: Layout */
@@ -821,6 +831,154 @@ svg {
 }
 
 /* END: Banner Image */
+/* START: Breadcrumb */
+.breadcrumb {
+  color: #999999;
+  padding-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.breadcrumb a {
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: .02em;
+  color: #999999;
+}
+
+.breadcrumb a:hover {
+  color: #232323;
+}
+
+.breadcrumb a:hover .text {
+  text-underline-offset: 0.2rem;
+}
+
+.breadcrumb .separate {
+  display: block;
+  position: relative;
+  padding: 0 7px;
+}
+
+.breadcrumb .separate svg {
+  width: 9px;
+  height: 10px;
+  position: relative;
+  top: -1px;
+  color: #999999;
+  fill: #999999;
+}
+
+/* END: Breadcrumb */
+/* START: Slick Slider */
+.slick-arrow {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  background-color: #ffffff;
+  border: 1px solid #cfcfcf;
+  color: #323232;
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 1;
+  outline: none;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  border-radius: 50%;
+  padding: 9px !important;
+}
+
+.slick-arrow:hover {
+  background-color: #323232;
+  color: #ffffff;
+  border-color: #232323;
+}
+
+.slick-arrow:hover svg {
+  fill: #ffffff;
+  color: #ffffff;
+}
+
+.slick-arrow svg {
+  width: 100%;
+  height: 100%;
+  color: #323232;
+  fill: #323232;
+  stroke: transparent;
+}
+
+.slick-arrow.slick-next {
+  right: -10px;
+}
+
+.slick-arrow.slick-next svg {
+  position: relative;
+  top: -2px;
+  left: 1px;
+}
+
+.slick-arrow.slick-prev {
+  left: -10px;
+}
+
+.slick-arrow.slick-prev svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  position: relative;
+  top: -2px;
+  right: 1px;
+}
+
+.slick-arrow.slick-disabled {
+  opacity: .4;
+}
+
+.slick-dots {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  letter-spacing: -.33em;
+  line-height: 0;
+}
+
+.slick-dots li {
+  display: inline-block;
+  font-size: 0px;
+  margin: 0 7px;
+  width: 12px;
+  height: 12px;
+  letter-spacing: normal;
+}
+
+.slick-dots li.slick-active button {
+  background: rgba(255, 255, 255, 0);
+  border-color: #505656;
+}
+
+.slick-dots button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #707979;
+  background: #707979;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+/* END: Slick Slider */
 /* START: Block Header */
 .halo-block-header {
   margin-bottom: 14px;
@@ -830,10 +988,9 @@ svg {
   color: #232323;
   position: relative;
   font-size: 20px;
-  margin-bottom: 10px;
-  display: block;
-  margin-right: 0;
-  margin-top: 1px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  letter-spacing: .05em;
 }
 
 .halo-block-header .title .text {
@@ -870,6 +1027,50 @@ svg {
 }
 
 /* END: Block Header */
+@media (max-width: 1024px) {
+  .slick-arrow.slick-next svg {
+    position: relative;
+    top: -3px;
+    left: 2px;
+  }
+}
+
+@media (max-width: 991px) {
+  .halo-block .halo-row--swipe {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 0 0 15px;
+    margin-left: -15px;
+    margin-right: 0;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .halo-block .halo-row--swipe .halo-row-item {
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 15px;
+    white-space: normal;
+    width: 350px;
+  }
+  .halo-block .halo-row--swipe .halo-row-item:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .halo-block .halo-row--swipe .halo-row-item {
+    width: 330px;
+  }
+}
+
+@media (max-width: 551px) {
+  .halo-block .halo-row--swipe .halo-row-item {
+    width: 300px;
+  }
+}
+
 @media (min-width: 768px) {
   .img-box--mobile .image {
     display: block;
@@ -900,14 +1101,17 @@ svg {
             transform: translate(0, -50%);
   }
   .row {
-    margin-left: -8px;
-    margin-right: -8px;
+    margin-left: -10px;
+    margin-right: -10px;
   }
   .row .halo-item {
-    padding: 0 8px;
+    padding: 0 10px;
   }
   .row > * {
-    padding: 0px 8px;
+    padding: 0px 10px;
+  }
+  .halo-block-header .title {
+    margin-bottom: 43px;
   }
 }
 
@@ -933,22 +1137,6 @@ svg {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=30)";
     filter: alpha(opacity=30);
   }
-  .animate-scale::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #232323;
-    overflow: hidden;
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
-    filter: alpha(opacity=0);
-    z-index: 2;
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
-  }
   .row {
     margin-left: -15px;
     margin-right: -15px;
@@ -966,16 +1154,15 @@ svg {
   .row .halo-item {
     padding: 0 15px;
   }
+  .halo-block-header .title .text {
+    width: 420px;
+  }
 }
 
 @media (min-width: 1200px) {
   .container.container-1170,
   .container.container-header-1170 {
     max-width: 1200px !important;
-  }
-  .halo-block-header .title .text {
-    padding: 0 20px;
-    width: 430px;
   }
 }
 
@@ -995,6 +1182,12 @@ svg {
     max-width: 1600px !important;
   }
   /* END: Container */
+  .slick-arrow.slick-prev {
+    left: -2px;
+  }
+  .slick-arrow.slick-next {
+    right: -2px;
+  }
 }
 
 @media (min-width: 1800px) {
