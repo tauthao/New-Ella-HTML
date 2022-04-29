@@ -1,0 +1,185 @@
+/* START: Section Full With Google-map */
+.contact-us-page-2{
+    .page-header {
+        background-image: url(/New-Ella-HTML/assets/images/banners/pages/banner-contact2-p.jpg);
+        background-size: cover;
+        background-repeat: repeat-x;
+        background-position: center top;
+        height: 270px;
+        background-attachment: fixed;
+    }
+    .breadcrumb{
+        color: #ffffff;
+        padding-top: 15px;
+        padding-bottom: 32px;
+        a{
+            color: #ffffff;
+        }
+        
+    }
+    .page-title{
+        margin: 15px;
+    }
+    .page-title{
+        font-size:24px;
+        letter-spacing:.05em;
+        color: #ffffff;
+    }
+    .text{
+        font-size: 12px;
+        line-height:24px;
+        letter-spacing:.02em;
+        color: #ffffff;
+        max-width:540px;
+        display: inline-block;
+        align-items: center;
+    }
+    .separate{
+        display: block;
+        position: relative;
+        padding: 0 7px;
+        svg{
+            color: #ffffff;
+            fill: #ffffff;
+        }
+    }
+}
+.contact-navigation{
+    .navigation{
+    background-color: #fafafa;
+    border: #fafafa;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 10px;
+    display: flex;
+    place-items: center;
+    }
+    .contact-page-nav{
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0 auto;
+        column-gap: 47px;
+        scroll-snap-type: x mandatory;
+        li.item {
+            color: #3c3c3c;
+            transition: background-color .35s ease-in-out;
+            position: relative;
+            width: max-content;
+            scroll-snap-align: start;
+            font-size: 12px;
+            a {
+                
+                font-weight: 500;
+                transition: color .35s ease-in-out;
+                color: 12px;
+                line-height: 22px;
+                letter-spacing:.02em;
+            }
+        }
+    }
+}
+
+.content-contact2{
+    h2.contact-main-title{
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-top: 50px;
+        margin-bottom: 28px;
+        letter-spacing: .05rem;
+    }
+
+    .contact-form-heading {
+        padding-bottom: 14px;
+    }
+
+    .contact-form-description {
+        padding: 0;
+        margin: 0 0 30px;
+    }
+
+    .contact-item.contact-itemLeft {
+        margin-top: 55px;
+        .contact-form .form-input {
+            padding-top: 12px;
+            padding-bottom: 16px;
+        }
+    }
+    .form-actions {
+        margin: 23px 0 0;
+        .button {
+            border-radius: 0;
+            margin-top: 5px;
+            width: 227px;
+            display: block;
+            margin-left: 0;
+            margin-right: auto;
+        }
+        
+    }
+    .contact-itemRight{
+        .button-2{
+            border-radius: 0;
+            margin: 35px 0 30px 0;
+            width: 205px;
+            height: 40px;
+            display: block;
+            margin-left: 0;
+            margin-right: auto;
+            display:flex;
+            align-items: center;
+        }
+        address p{
+            margin-top:10px;
+        }
+    }
+
+
+}   
+
+
+.header-map{
+
+}
+
+@media (max-width: 767px) {
+  
+}
+@media (min-width: 768px){
+    .contact-item {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        padding: 0 15px;
+    }
+    .contact-item+.contact-item {
+        margin-top: 0;
+    }
+}
+
+@media (min-width:768px) and (max-width:1199px) {
+}
+@media (min-width: 1350px){
+    .background-form-right {
+        width: 470px;
+        margin-left: 47px;
+        padding: 55px;
+        background-color: #fafafa;
+    }
+    
+}   
+@media (min-width: 1400px){
+    .contact-item.contact-itemRight {
+        width: 370px;
+        margin-left: 0 ;
+        margin-top: 25px;
+    }
+}
+
+
+
+
+

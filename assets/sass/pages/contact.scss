@@ -1,0 +1,100 @@
+/* START: Section Full With Google-map */
+.halo-googlemap{
+    margin-bottom: 25px;
+}
+/* END: Section Full With Google-map */
+
+
+/* START: Section Full With Main */
+.halo-page-contact{
+    padding-top: 0px;
+    padding-bottom: 60px;
+    .breadcrumb{
+        color: #999999;
+        a{
+            color: #999999;
+        }
+    }
+    .page-header{
+        padding-bottom: 5px;
+    }
+    .contact-text{
+        font-size: 12px;
+        font-weight:normal;
+        line-height:24px;
+        letter-spacing:.02em;
+        color: #323232;
+    }
+    .contact-form {
+        margin: 22px 0 0;
+    }
+    .form-actions {
+        margin: 23px 0 0;
+        .button {
+            border-radius: 0;
+            margin-top: 5px;
+            width: 227px;
+            display: block;
+            margin-left: 0;
+            margin-right: auto;
+        }
+    }
+    .contact-title {
+        padding-bottom: 20px;
+    }
+    .contact-itemRight{
+        padding: 0 15px;
+    }
+    .contact-text+.contact-info {
+        margin-top: 21px;
+        p:nth-child(1){
+            line-height: 30px;
+            margin-bottom: 0px;
+            margin-top: 5px;
+        }
+        p:nth-child(2){
+            line-height: 30px;
+            margin-top: 0;
+        }
+    }
+    .contact-address {
+        margin-top: 18px;
+    }
+    .contact-address + .contact-store {
+        border-top: 1px solid #dedede;
+        padding-top: 5px;
+        margin-top: 15px;
+    }
+    .contact-address, .contact-store {
+        line-height: 2;
+        color: #323232;
+        font-size:12px;
+        font-weight:normal;
+        p{
+            padding-top: 10px;
+        }
+    }
+}
+/* END: Section Full With Main */
+
+
+@media (max-width: 767px) {
+    .container, .container-1770, .container-1170 {
+        padding-left: 10px;
+        padding-right: 10px;
+    } 
+    .contact-item+.contact-item {
+        margin-top: 50px;
+    }
+    .halo-page-contact .contact-itemRight {
+        padding: 0 5px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1199px) {
+    .contact-itemLeft{
+        padding-right:40px;
+    }
+}
+
+
