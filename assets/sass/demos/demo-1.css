@@ -56,7 +56,6 @@
   padding-bottom: 30px;
 }
 
-/* END: Section Full With Banner */
 /* START: Section Sub Banner */
 .halo-sub-banner {
   padding-bottom: 30px;
@@ -72,20 +71,7 @@
   letter-spacing: .05em;
 }
 
-/* END: Section Sub Banner */
 /* START: Section  spotlight*/
-.spotlight-block .spotlight-swiper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-.spotlight-block .item {
-  padding: 15px;
-}
-
 .spotlight-block .content {
   padding-top: 30px;
 }
@@ -107,60 +93,79 @@
   margin-top: 30px;
 }
 
-/* END: Section  spotlight*/
 /* START: Section  brands*/
 .brands-block {
-  border-top: 1px solid #c2c2c2;
-  margin-top: 40px;
+  border-top: 1px solid #ebebeb;
+  padding: 18px 0px 15px;
+  margin-top: 65px;
 }
 
-.brands-block .brands {
-  margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.brands-block .halo-row-item {
+  padding: 0px 15px;
+  display: none;
 }
 
-.brands-block .brands div {
-  width: 240px;
+.brands-block .halo-row-item a {
+  display: block;
 }
 
-/* END: Section  brands*/
+.brands-block .slick-initialized .halo-row-item {
+  display: block;
+}
+
+/* START: Instagram*/
 .instagram-block {
   background-color: #fafafa;
-  padding: 60px 0;
+  padding: 35px 0 40px;
 }
 
-.instagram-block .title-ins {
+.instagram-block .halo-block-header .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 12px;
+  margin-bottom: 13px;
 }
 
-.instagram-block .title-ins svg {
-  width: 20px;
-  height: 20px;
-  margin-right: 14px;
-  position: relative;
-  top: 2px;
+.instagram-block .halo-block-header .title::before {
+  display: none;
 }
 
-.instagram-block .halo-block-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0 5px;
+.instagram-block .halo-block-header .title svg {
+  width: 22px;
+  height: 22px;
+  margin-right: 13px;
 }
 
-.instagram-block .ins-button {
+.instagram-block .halo-block-header .desc {
+  padding-bottom: 22px;
+}
+
+.instagram-block .halo-block-content .row {
+  margin-left: -2.5px;
+  margin-right: -2.5px;
+}
+
+.instagram-block .halo-block-content .row .halo-row-item {
+  padding: 0px 2.5px;
+  display: none;
+}
+
+.instagram-block .halo-block-content .row.slick-initialized .halo-row-item {
+  display: block;
+}
+
+.instagram-block .halo-block-content .row > * {
+  padding: 0;
+}
+
+.instagram-block .instagram-button {
   margin-top: 30px;
 }
 
-.instagram-block .ins-button .button {
+.instagram-block .instagram-button .button {
   min-width: 230px;
 }
 
@@ -170,18 +175,10 @@
     font-size: 30px;
     margin-bottom: 15px;
   }
-  /* END: Section Full With Banner */
   /* START: Section  spotlight*/
-  .spotlight-block .item {
-    padding: 8px;
-  }
-  .spotlight-block .img-box img {
-    width: 100%;
-  }
   .spotlight-block .content .des {
     min-width: 300px;
   }
-  /* END: Section  spotlight*/
 }
 
 @media (max-width: 767px) {
@@ -219,15 +216,13 @@
     font-size: 12px !important;
     line-height: 22px;
   }
-  /* END: Section Full With Banner-1 */
   /* START: Section Sub Banner */
-  .halo-sub-banner .halo-item {
+  .halo-sub-banner .halo-row-item {
     width: 100%;
   }
-  .halo-sub-banner .halo-item + .halo-item {
+  .halo-sub-banner .halo-row-item + .halo-row-item {
     margin-top: 15px;
   }
-  /* END: Section Sub Banner */
   /* START: Section Sub Banner-2 */
   .halo-block-content .content-box--right {
     position: absolute;
@@ -248,15 +243,6 @@
     font-size: 12px !important;
     line-height: 22px;
   }
-  /* END: Section Sub Banner-2 */
-  /* START: Section  spotlight*/
-  .spotlight-block .item {
-    padding: 5px;
-  }
-  .spotlight-block .img-box img {
-    width: 100%;
-  }
-  /* END: Section  spotlight*/
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -273,7 +259,6 @@
     padding-top: 25px;
     padding-bottom: 30px;
   }
-  /* END: Section Sub Banner */
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -281,14 +266,21 @@
   .halo-block-content .content-box--left {
     left: calc( (100% - 950px) / 2);
   }
-  /* END: Section Sub Banner */
 }
 
 @media (min-Width: 1200px) {
   /* START: Section Sub Banner */
-  .halo-sub-banner .halo-item .banner-title {
+  .halo-sub-banner .halo-row-item .banner-title {
     font-size: 16px;
   }
-  /* END: Section Sub Banner */
+}
+
+@media (min-width: 1600px) {
+  .instagram-block .halo-block-content .slick-arrow.slick-next {
+    right: -15px;
+  }
+  .instagram-block .halo-block-content .slick-arrow.slick-prev {
+    left: -15px;
+  }
 }
 /*# sourceMappingURL=demo-1.css.map */
